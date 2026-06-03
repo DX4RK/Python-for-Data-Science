@@ -1,16 +1,9 @@
 import sys
 
-def check_arg(argv):
-	try:
-		argv[1]
-		return argv[1]
-	except IndexError:
-		return False
-
-def main() -> int:
+def main():
 	assert len(sys.argv) <= 2, "more than one argument is provided"
 
-	num_arg = check_arg(sys.argv)
+	num_arg = sys.argv[1]
 	if num_arg == False: return;
 
 	try:
