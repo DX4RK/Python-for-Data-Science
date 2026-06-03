@@ -9,6 +9,6 @@ is true. If function is None, return the items that are true."""
         try:
             if func and func(value) or value:
                 new_iterable.append(value)
-        except:
+        finally:
             continue
     return new_iterable
