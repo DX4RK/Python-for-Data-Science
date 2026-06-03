@@ -2,7 +2,11 @@ import sys
 
 
 def main():
-    assert len(sys.argv) <= 2, "more than one argument is provided"
+    argv_len = len(sys.argv)
+    assert argv_len <= 2, "more than one argument is provided"
+
+    if argv_len < 2:
+        return
 
     num_arg = sys.argv[1]
     if num_arg is False:
