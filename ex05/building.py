@@ -2,28 +2,28 @@ import sys
 
 
 def count_uppercases(text: str) -> int:
-    """"Count the uppercases in text and return it."""
+    """Count the uppercases in text and return it."""
     return sum(1 for c in text if c.isupper())
 
 
 def count_lowercases(text: str) -> int:
-    """"Count the lowercases in text and return it."""
+    """Count the lowercases in text and return it."""
     return sum(1 for c in text if c.islower())
 
 
 def count_punctuations(text: str) -> int:
-    """"Count the punctuation marks in text and return it."""
+    """Count the punctuation marks in text and return it."""
     punctuations = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
     return sum(1 for c in text if c in punctuations)
 
 
 def count_spaces(text: str) -> int:
-    """"Count the spaces in text and return it."""
+    """Count the spaces in text and return it."""
     return sum(1 for c in text if c.isspace())
 
 
 def count_digits(text: str) -> int:
-    """"Count the digits in text and return it."""
+    """Count the digits in text and return it."""
     return sum(1 for c in text if c.isdigit())
 
 
