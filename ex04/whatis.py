@@ -5,7 +5,8 @@ def main():
     assert len(sys.argv) <= 2, "more than one argument is provided"
 
     num_arg = sys.argv[1]
-    if num_arg == False: return;
+    if num_arg is False:
+        return
 
     try:
         num = int(num_arg)
@@ -17,9 +18,9 @@ def main():
     else:
         print("I'm Odd")
 
+
 if __name__ == '__main__':
     try:
         main()
     except AssertionError as error:
         print(f"AssertionError: {error}")
-
