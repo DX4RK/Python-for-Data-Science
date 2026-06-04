@@ -9,7 +9,7 @@ is true. If function is None, return the items that are true."""
 
     for value in iterable:
         try:
-            if func and func(value) == True:
+            if func and func(value):
                 new_iterable.append(value)
         finally:
             continue
