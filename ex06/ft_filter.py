@@ -3,11 +3,13 @@ def ft_filter(func: callable, iterable: list):
 
 Return an iterator yielding those items of iterable for which function(item)
 is true. If function is None, return the items that are true."""
-
     new_iterable = []
+    if not func:
+        return list
+
     for value in iterable:
         try:
-            if func and func(value) or value:
+            if func and func(value) == True:
                 new_iterable.append(value)
         finally:
             continue
