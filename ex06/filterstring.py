@@ -38,7 +38,14 @@ def is_valid(word: str) -> bool:
 def main():
     assert parse_arguments(), "the arguments are bad"
     target_text = sys.argv[1]
-    print(ft_filter(is_valid, target_text.split()))
+    words_list = target_text.split()
+    max_length = int(sys.argv[2])
+
+    #print([value for value in words_list if len(value) > max_length])
+    print(ft_filter(
+        lambda word: len(word) > max_length,
+        words_list)
+        )
 
 
 if __name__ == '__main__':
