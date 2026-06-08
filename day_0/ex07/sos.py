@@ -1,16 +1,16 @@
 import sys
 
 NESTED_MORSE = {
-    # [0]: "-----",
-    # [1]: ".----",
-    # [2]: "..---",
-    # [3]: "...--",
-    # [4]: "....-",
-    # [5]: ".....",
-    # [6]: "-....",
-    # [7]: "--...",
-    # [8]: "---..",
-    # [9]: "----.",
+    "0": "-----",
+    "1": ".----",
+    "2": "..---",
+    "3": "...--",
+    "4": "....-",
+    "5": ".....",
+    "6": "-....",
+    "7": "--...",
+    "8": "---..",
+    "9": "----.",
 
     ".": "",
     ",": "",
@@ -82,7 +82,7 @@ def parse_arguments() -> bool:
 
 def main():
     assert parse_arguments(), "the arguments are bad"
-    target_text = sys.argv[1]
+    target_text = sys.argv[1].lower()
     target_len = len(target_text)
     final_text = ""
 
