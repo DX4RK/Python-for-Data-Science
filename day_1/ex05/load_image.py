@@ -14,4 +14,6 @@ def ft_load(path: str) -> np.ndarray:
         return None
 
     pixels = np.array(image)
+    print(f"The shape of image is: {pixels.shape}")
+    print(pixels)
     return pixels
