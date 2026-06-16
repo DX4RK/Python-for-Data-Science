@@ -1,12 +1,12 @@
 from PIL import Image
-from load_image import ft_load
-import matplotlib.pyplot as plt
 import numpy as np
+
 
 def ft_invert(array) -> np.ndarray:
     """Inverts the color fo the image received."""
     inverted = 255 - array
     return Image.fromarray(inverted).show()
+
 
 def ft_red(array) -> np.ndarray:
     """Converts the image by turning its colors red."""
@@ -18,6 +18,7 @@ def ft_red(array) -> np.ndarray:
     image.save("")
     return image
 
+
 def ft_green(array) -> np.ndarray:
     """Converts the image by turning its colors green."""
     green = array.copy()
@@ -27,6 +28,7 @@ def ft_green(array) -> np.ndarray:
     image = Image.fromarray(green)
     image.show()
     return image
+
 
 def ft_blue(array) -> np.ndarray:
     """Converts the image by turning its colors blue."""
@@ -38,6 +40,7 @@ def ft_blue(array) -> np.ndarray:
     image.show()
     return image
 
+
 def ft_grey(array):
     """Converts the image by turning its colors grey."""
     grey = np.mean(array, axis=2, keepdims=True)
@@ -46,6 +49,3 @@ def ft_grey(array):
     image = Image.fromarray(np_grey)
     image.show()
     return image
-
-if __name__ == "__main__":
-    main()

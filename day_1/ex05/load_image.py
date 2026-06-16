@@ -1,9 +1,10 @@
-import PIL
 from PIL import Image
 import numpy as np
 
+
 def ft_load(path: str) -> np.ndarray:
-    """Load an image from path, print its shape, and return its pixels in RGB."""
+    """Load an image from path, print its shape,
+and return its pixels in RGB."""
     try:
         image = Image.open(path).convert("RGB")
     except FileNotFoundError:

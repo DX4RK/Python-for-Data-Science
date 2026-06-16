@@ -1,7 +1,6 @@
-from PIL import Image
 from load_image import ft_load
 import matplotlib.pyplot as plt
-import numpy as np
+
 
 def main():
     image_path = "animal.jpeg"
@@ -10,13 +9,14 @@ def main():
         return
     print(image)
 
-    zoomed_img = image[100:500, 450:850, 0:1]
+    zoomed = image[100:500, 450:850, 0:1]
 
-    print(f"New shape after slicing: {zoomed_img.shape} or {zoomed_img.shape[:2]}")
-    print(zoomed_img)
+    print(f"New shape after slicing: {zoomed.shape} or {zoomed.shape[:2]}")
+    print(zoomed)
 
-    plt.imshow(zoomed_img, cmap="gray")
+    plt.imshow(zoomed, cmap="gray")
     plt.show()
+
 
 if __name__ == "__main__":
     main()
