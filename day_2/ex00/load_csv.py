@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 
-def load(path: str) -> pd.:
+def load(path: str) -> pd.DataFrame:
     try:
         if not os.path.isfile(path):
             raise AssertionError("Invalid path, file does not exist.")
