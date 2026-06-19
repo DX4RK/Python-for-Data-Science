@@ -14,7 +14,7 @@ def convert_pop(x):
     return float(x)
 
 def main():
-    df = load("population_total.csv")
+    df = load("life_expectancy_years.csv")
 
     if df is None:
         return
@@ -24,22 +24,13 @@ def main():
     years = years[mask].tolist()
 
     df_france = df[df["country"] == "France"]
-    df_belgium = df[df["country"] == "Belgium"]
 
     fr = (
         df_france.iloc[0, 1:][mask]
-        .apply(convert_pop)
         .tolist()
     )
 
-    bg = (
-        df_belgium.iloc[0, 1:][mask]
-        .apply(convert_pop)
-        .tolist()
-    )
-
-    plt.plot(years, fr, label="France")
-    plt.plot(years, bg, label="Belgium")
+    plt.scatter(years, fr, label="France")
     plt.gca().yaxis.set_major_formatter(
         FuncFormatter(lambda x, pos: f"{int(x)}M")
     )
